@@ -6,13 +6,13 @@
 
 /* Body styling */
 body {
-    background-color: #e32047;
-    text-align: center;
+    background-color: #e32047; /* Set background color */
+    text-align: center; /* Center-align text */
 }
 
 /* Main game container styling */
 .main {
-    height: 70vh;
+    height: 70vh; /* Set height of the main game container */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,36 +25,36 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px;
-    height: 60vh;
-    width: 60vh;
-    background-color: black;
-    border-radius: 20px;
+    height: 60vh; /* Set height of the game board container */
+    width: 60vh; /* Set width of the game board container */
+    background-color: black; /* Set background color */
+    border-radius: 20px; /* Set border radius */
     margin-top: 50px;
 }
 
 /* Individual game cell styling */
 .box {
-    height: 18vh;
-    width: 18vh;
+    height: 18vh; /* Set height of individual game cell */
+    width: 18vh; /* Set width of individual game cell */
     margin: 6px;
     border-radius: 15px;
-    border: 2px solid black;
-    background-color: white;
+    border: 2px solid black; /* Set border style and color */
+    background-color: white; /* Set background color */
     font-size: 3.5em;
     color: black;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Add transition effect */
 }
 
 /* Styling for clicked game cell */
 .box.clicked {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Add a rotation effect for clicked cells */
 }
 
 /* Header styling */
 h1 {
     margin-top: 10px;
     margin-bottom: 25px;
-    color: yellow;
+    color: yellow; /* Set text color */
     font-style: bold;
     font-family: sans-serif;
 }
@@ -93,7 +93,6 @@ span {
     background-color: white;
     margin-right: -5px;
 }
-
 
 /* Winner message styling */
 #winner {
@@ -160,7 +159,6 @@ span {
     display: none;
     transition: 0.5s;
 }
-
 
 /* Add this styling for player or AI selection */
 .selection {

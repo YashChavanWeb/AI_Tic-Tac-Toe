@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
 </head>
+
+<!-- Link to external CSS stylesheet -->
 <link rel="stylesheet" href="style.css">
 
 <body>
@@ -15,7 +17,9 @@
 
     <!-- Player or AI selection -->
     <div class="selection">
+        <!-- Label for opponent selection dropdown -->
         <label for="playerType">Select Opponent:</label>
+        <!-- Dropdown to select player or AI opponent -->
         <select id="playerType">
             <option value="player">Player</option>
             <option value="ai">AI</option>
@@ -24,14 +28,16 @@
 
     <!-- Player Switch Section -->
     <div class="switch">
+        <!-- Display 'X' for player one -->
         <span id="one">X</span>
+        <!-- Display 'O' for player two -->
         <span id="two">O</span>
     </div>
 
     <!-- Main Game Board -->
     <div class="main">
         <div class="container">
-            <!-- Game Board Cells -->
+            <!-- Game Board Cells (buttons) -->
             <button class="box"></button>
             <button class="box"></button>
             <button class="box"></button>
@@ -46,11 +52,14 @@
 
     <!-- Play Again Section -->
     <div class="last">
+        <!-- Button to play again -->
         <button class="play-again">Play Again</button>
 
         <!-- Message Display Section -->
         <div class="message hide">
+            <!-- Display winner or tie message -->
             <p id="winner"></p>
+            <!-- Button to start a new game -->
             <button id="new-game">New Game</button>
         </div>
     </div>

@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     };
 
-    // Function to change the switch 
+    // Function to change the switch background color
     function changeBg() {
+        // Toggle background color based on the current player
         if (currentPlayer === "X") {
             currentPlayer = "O";
             document.querySelector('#two').style.backgroundColor = "white";
@@ -49,10 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to handle player's move
     const handlePlayerMove = (index) => {
         if (!gameOver && gameBoard[index] === '') {
+            // Update game state for the selected move
             gameBoard[index] = currentPlayer;
             boxes[index].textContent = currentPlayer;
             boxes[index].classList.add('clicked');
 
+            // Check for a winner or a tie
             const winner = checkWinner();
             if (winner) {
                 gameOver = true;
@@ -63,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 messageDisplay.classList.remove('hide');
                 winnerDisplay.textContent = 'It\'s a tie!';
             } else {
+                // Switch player and continue the game
                 changeBg();
                 // If AI is the next player, make its move
                 if (currentPlayer === playerO && playerTypeSelect.value === 'ai') {
@@ -74,7 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to make AI move using Minimax algorithm
     const makeAIMove = () => {
+        // Get the best move from the Minimax algorithm
         const bestMove = getBestMove();
+        // Handle the AI's move
         handlePlayerMove(bestMove);
     };
 
@@ -85,10 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < 9; i++) {
             if (gameBoard[i] === '') {
+                // Simulate the AI's move and evaluate the score using Minimax
                 gameBoard[i] = playerO;
                 const score = minimax(gameBoard, 0, false);
+                // Undo the simulated move
                 gameBoard[i] = '';
 
+                // Update the best move if the current score is better
                 if (score > bestScore) {
                     bestScore = score;
                     bestMove = i;
@@ -109,29 +118,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const winner = checkWinner();
         if (winner) {
+            // Return the score based on the winner
             return scores[winner];
         }
 
         if (isBoardFull()) {
+            // Return a tie score if the board is full
             return scores.tie;
         }
 
         if (isMaximizing) {
             let maxScore = -Infinity;
+            // Evaluate possible moves and choose the one with the maximum score
             for (let i = 0; i < 9; i++) {
                 if (board[i] === '') {
                     board[i] = playerO;
                     maxScore = Math.max(maxScore, minimax(board, depth + 1, !isMaximizing));
+                    // Undo the simulated move
                     board[i] = '';
                 }
             }
             return maxScore;
         } else {
             let minScore = Infinity;
+            // Evaluate possible moves and choose the one with the minimum score
             for (let i = 0; i < 9; i++) {
                 if (board[i] === '') {
                     board[i] = playerX;
                     minScore = Math.min(minScore, minimax(board, depth + 1, !isMaximizing));
+                    // Undo the simulated move
                     board[i] = '';
                 }
             }
@@ -148,24 +163,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for Play Again button
     playAgainBtn.addEventListener('click', () => {
+        // Reset the game state and hide the message display
         resetGame();
         messageDisplay.classList.add('hide');
     });
 
     // Event listener for New Game button
     newGameBtn.addEventListener('click', () => {
+        // Reset the game state and hide the message display
         resetGame();
         messageDisplay.classList.add('hide');
     });
 
     // Function to reset the game
     const resetGame = () => {
+        // Reset game board and clear UI
         gameBoard = ['', '', '', '', '', '', '', '', ''];
         boxes.forEach((box) => {
             box.textContent = '';
             box.classList.remove('clicked');
         });
 
+        // Reset current player and game over state
         currentPlayer = playerX;
         gameOver = false;
 
@@ -176,11 +195,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for player type selection
     playerTypeSelect.addEventListener('change', () => {
+        // Reset the game state when changing player type
         resetGame();
+        // If AI is the next player, make its move
         if (currentPlayer === playerO && playerTypeSelect.value === 'ai') {
             makeAIMove();
             changeBg(); // Ensure background color is updated after AI move
         }
     });
 });
-                            
+
+// Function Summaries:
+// - checkWinner: Check if there is a winner based on the current game state.
+// - changeBg: Toggle background color based on the current player.
+// - isBoardFull: Check if the game board is full (tie).
+// - handlePlayerMove: Handle the player's move, update the game state, and check for a winner or tie.
+// - makeAIMove: Get the best move for the AI and handle the AI's move.
+// - getBestMove: Simulate AI moves and choose the one with the highest score using Minimax.
+// - minimax: Minimax algorithm for AI decision-making.
+// - resetGame: Reset the game state for a new game.
