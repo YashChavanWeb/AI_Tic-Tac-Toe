@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character set and viewport for better rendering on different devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- Header Section -->
+    <h1>Tic-Tac-Toe</h1>
+
+    <!-- Player or AI selection -->
+    <div class="selection">
+        <label for="playerType">Select Opponent:</label>
+        <select id="playerType">
+            <option value="player">Player</option>
+            <option value="ai">AI</option>
+        </select>
+    </div>
+
+    <!-- Player Switch Section -->
+    <div class="switch">
+        <span id="one">X</span>
+        <span id="two">O</span>
+    </div>
+
+    <!-- Main Game Board -->
+    <div class="main">
+        <div class="container">
+            <!-- Game Board Cells -->
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+    </div>
+
+    <!-- Play Again Section -->
+    <div class="last">
+        <button class="play-again">Play Again</button>
+
+        <!-- Message Display Section -->
+        <div class="message hide">
+            <p id="winner"></p>
+            <button id="new-game">New Game</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

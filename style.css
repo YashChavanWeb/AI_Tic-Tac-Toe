@@ -1,0 +1,174 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    background-color: #e32047;
+    text-align: center;
+}
+
+/* Main game container styling */
+.main {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game board container styling */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 60vh;
+    width: 60vh;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+/* Individual game cell styling */
+.box {
+    height: 18vh;
+    width: 18vh;
+    margin: 6px;
+    border-radius: 15px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 3.5em;
+    color: black;
+    transition: transform 0.5s ease;
+}
+
+/* Styling for clicked game cell */
+.box.clicked {
+    transform: rotateY(180deg);
+}
+
+/* Header styling */
+h1 {
+    margin-top: 30px;
+    color: yellow;
+    font-style: bold;
+    font-family: sans-serif;
+}
+
+/* Play Again button styling */
+.play-again {
+    background-color: yellow;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    font-size: 20px;
+}
+
+/* Player switch styling */
+.switch {
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+/* Styling for player symbols (X and O) */
+span {
+    border: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+    width: 50px;
+    border: 2px solid white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: bold;
+    transition: 0.3s ease;
+}
+
+#one {
+    background-color: white;
+    margin-right: -5px;
+}
+
+
+/* Winner message styling */
+#winner {
+    display: inline-block;
+    background-color: #007f5f;
+    color: #f2e8cf;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+/* New Game button styling */
+#new-game {
+    background-color: yellow;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+/* Styling for the Play Again section */
+.last {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for hidden elements */
+.hide {
+    display: none;
+    transition: 0.5s;
+}
+
+/* Hover effect for game cells */
+.box:hover {
+    background-color: lightgray;
+    color: black;
+    transition: 0.5s ease;
+}
+
+/* Hover effect for buttons */
+#new-game:hover,
+#winner:hover,
+.play-again:hover {
+    color: white;
+    background-color: black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+/* Additional styling for a specific class */
+.surprise {
+    color: red;
+}
+
+/* Additional styling for a specific class */
+.oncemore {
+    display: none;
+    transition: 0.5s;
+}
+
+
+/* Add this styling for player or AI selection */
+.selection {
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: white;
+}
+
+#playerType {
+    padding: 5px;
+    border-radius: 5px;
+}
