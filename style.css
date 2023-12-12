@@ -149,17 +149,6 @@ span {
     cursor: pointer;
 }
 
-/* Additional styling for a specific class */
-.surprise {
-    color: red;
-}
-
-/* Additional styling for a specific class */
-.oncemore {
-    display: none;
-    transition: 0.5s;
-}
-
 /* Add this styling for player or AI selection */
 .selection {
     margin-bottom: 20px;
