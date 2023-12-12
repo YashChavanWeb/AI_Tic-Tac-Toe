@@ -48,12 +48,12 @@ Functions Used:
 
 4. Handle Player Move Function (parameter: index):
    - Updates the game state by filling the array with X and O at the given index as a parameter.
-   - Checks if the game is over and the game board index is not filled.
+   - First in the if condition we check if game is over and gameboard index is not filled "" then
      - Adds the value to the game board array.
      - Adds the value to the list of boxes by text content.
      - Adds the clicked class to show the flip animation.
    - Stores the winner by calling the check winner function.
-   - If there is a winner:
+   - If there is a winner then:
      - Game over is set to true.
      - The two hidden buttons are shown by removing the hide class.
      - The winner paragraph is modified by text content and backticks.
