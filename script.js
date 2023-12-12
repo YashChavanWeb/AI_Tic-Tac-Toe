@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const pattern of winPatterns) {
             const [a, b, c] = pattern;
             if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
-                return gameBoard[a];
+                return gameBoard[a];     //this will return x and Y based on the winner
             }
         }
 
@@ -51,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const handlePlayerMove = (index) => {
         if (!gameOver && gameBoard[index] === '') {
             // Update game state for the selected move
-            gameBoard[index] = currentPlayer;
-            boxes[index].textContent = currentPlayer;
+            gameBoard[index] = currentPlayer;     //this will be X for the first iteration
+            boxes[index].textContent = currentPlayer;  // also update on the screen
             boxes[index].classList.add('clicked');
 
             // Check for a winner or a tie
-            const winner = checkWinner();
-            if (winner) {
+            const winner = checkWinner();    //the value here will be either x or y or null
+            if (winner) {     //this will be true if the winner has a value and it is not null
                 gameOver = true;
                 messageDisplay.classList.remove('hide');
                 winnerDisplay.textContent = `${winner} wins!`;
@@ -219,3 +219,4 @@ const makeAIMove = () => {
 // - getBestMove: Simulate AI moves and choose the one with the highest score using Minimax.
 // - minimax: Minimax algorithm for AI decision-making.
 // - resetGame: Reset the game state for a new game.
+
