@@ -66,7 +66,7 @@ Functions Used:
      - If AI is the player and the current player is O, calls the make AI move function.
 
 5. Make AI Move Function:
-   - Adds a time delay for a smoother AI move.
+   - Adds a time delay for a smoother AI move : Syntax - setTimeout(callbackFunction, delayInMilliseconds);.
    - Calls two functions:
      - Stores the get best move function value.
      - Passes this value as a parameter to the handle player move function.
