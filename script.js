@@ -76,13 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Function to make AI move using Minimax algorithm
-    const makeAIMove = () => {
+    
+// Function to make AI move using Minimax algorithm with a delay
+const makeAIMove = () => {
+    // Add a delay of 500 milliseconds (adjust the value as needed)
+    setTimeout(() => {
         // Get the best move from the Minimax algorithm
         const bestMove = getBestMove();
         // Handle the AI's move
         handlePlayerMove(bestMove);
-    };
+    }, 500); // 500 milliseconds delay
+};
+
 
     // Function to get the best move for the AI using Minimax algorithm
     const getBestMove = () => {
