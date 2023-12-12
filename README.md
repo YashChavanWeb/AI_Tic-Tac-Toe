@@ -1,5 +1,12 @@
 # Task:
-Explore a sleek and interactive website featuring a dynamic stopwatch. Engage with precision timekeeping, accompanied by captivating clicking effects and seamless transitions. Our sophisticated timekeeping tool boasts user-friendly controls, including start and stop, reset, laps, and clear all buttons. Experience a visually appealing journey through elapsed time, enhanced by the functionality of our intuitive stopwatch.
+To build a tic-tac-toe web application, you can use HTML, CSS, and JavaScript. By implementing functions to handle user clicks, track game state, and check for winning conditions, you can create an interactive and engaging tic-tac-toe game. With these technologies and functionalities, users can play against each other or against an AI opponent, aiming to get three markers in a row to win the game.
+
+Website Link : https://yashchavanweb.github.io/PRODIGY_WD_03/
 
 
-https://yashchavanweb.github.io/PRODIGY_WD_03/
+## Demo : 
+
+
+# Learnings from the Project:
+
+
