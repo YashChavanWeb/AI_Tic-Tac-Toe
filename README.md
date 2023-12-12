@@ -71,7 +71,7 @@ Functions Used:
      - Stores the get best move function value.
      - Passes this value as a parameter to the handle player move function.
 
-6. Get Best Move Function (parameters: bestMove, bestScore):
+6. Get Best Move Function (initial values: bestMove, bestScore):
    - Runs a loop 9 times, representing each cell on the game board.
    - If the game board has no value:
      - Stores O at that game board index.
