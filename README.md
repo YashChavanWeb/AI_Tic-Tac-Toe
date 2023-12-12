@@ -5,7 +5,7 @@ Website Link : https://yashchavanweb.github.io/PRODIGY_WD_03/
 
 
 # Demo : 
-https://github.com/YashChavanWeb/PRODIGY_WD_03/assets/112185595/96882f70-b39f-4229-a83c-6b8f6c5ee4a2
+https://github.com/YashChavanWeb/PRODIGY_WD_03/assets/112185595/3c79cb22-719d-450e-be7f-adf83dbc9c8a
 
 
 # Learnings from the Project:
