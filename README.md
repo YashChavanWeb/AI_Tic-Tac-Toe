@@ -77,7 +77,7 @@ Functions Used:
      - Stores O at that game board index.
      - Goes to the Minimax algorithm, which gives the index of the game as the score.
      - Undoes the game board changes as its work is over.
-     - If the score is greater than the best score (always true), updates both best move and best score.
+     - If the score is greater than the best score, updates both best move and best score.
    - Returns the best move at the end of the function.
 
 
